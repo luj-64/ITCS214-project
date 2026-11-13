@@ -23,6 +23,12 @@ public StudyTask( int TI , String TT , int CI , String DL , int P , String S ) /
     if ( ! S.equalsIgnoreCase("Pending") && ! S.equalsIgnoreCase("In Progress") && ! S.equalsIgnoreCase("Completed") )
     throw new IllegalArgumentException("Invalid Status"); 
     
+     String[] date = DL.split("/");
+    if (date.length != 3)
+    throw new IllegalArgumentException("Invalid Deadline");
+    if( date[0].length() != 2 || date[1].length() != 2 || date[2].length() != 4  )
+    throw new IllegalArgumentException("Invalid Deadline");
+
     taskID = TI ;
     taskTitle = TT ;
     courseID = CI ;
@@ -74,18 +80,22 @@ public StudyTask( int TI , String TT , int CI , String DL , int P , String S ) /
   }
 
   // setter and getter for deadline
-
+  
   public void setDeadline( String DL )
   {
-     if (  )
-    throw new IllegalArgumentException("Invalid deadline"); 
+    String[] date = DL.split("/");
+    if (date.length != 3)
+    throw new IllegalArgumentException("Invalid Deadline");
+    if( date[0].length() != 2 || date[1].length() != 2 || date[2].length() != 4  )
+    throw new IllegalArgumentException("Invalid Deadline");
     deadline = DL ;
   }
 
   public String getDeadline()
   {
     return deadline;
-  }
+  } 
+
 
   // setter and getter for priority
 
@@ -160,3 +170,14 @@ public StudyTask( int TI , String TT , int CI , String DL , int P , String S ) /
 
   
 }
+
+
+
+
+
+
+
+
+
+
+  
