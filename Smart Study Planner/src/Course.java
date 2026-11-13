@@ -13,6 +13,12 @@ private int creditHours ;
   public Course (int CI , String CN , String IN , int CH ) // We used the first two letters of each variable name as parameter names
 
   {
+    if( CI > 99999 || CI < 10000 )
+    throw new IllegalArgumentException("Invalid Course ID");
+
+    if( CH > 6 || CH < 1 )
+    throw new IllegalArgumentException("Invalid Credit hours");
+  
     courseID = CI;
     courseName = CN;
     instructorName = IN;
@@ -24,6 +30,8 @@ private int creditHours ;
 
   public void setCourseID( int CI )
   {
+    if( CI > 99999 || CI < 10000 )
+    throw new IllegalArgumentException("Invalid Course ID");
     courseID = CI ;
   }
 
@@ -61,6 +69,8 @@ private int creditHours ;
 
   public void setCreditHours( int CH )
   {
+    if( CH > 6 || CH < 1 )
+    throw new IllegalArgumentException("Invalid Credit hours");
     creditHours = CH ;
   }
 
