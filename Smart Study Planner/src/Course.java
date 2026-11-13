@@ -13,20 +13,79 @@ private int creditHours ;
   public Course (int CI , String CN , String IN , int CH ) // We used the first two letters of each variable name as parameter names
 
   {
-    this.courseID = CI;
-    this.courseName = CN;
-    this.instructorName = IN;
-    this.creditHours = CH;
+    courseID = CI;
+    courseName = CN;
+    instructorName = IN;
+    creditHours = CH;
     
   }
-
-
   
+// setter and getter for courseID
+
+  public void setCourseID( int CI )
+  {
+    courseID = CI ;
+  }
+
+  public int getCourseID()
+  {
+    return courseID;
+  }
+
+ // setter and getter for courseName
+
+  public void setCourseName( String CN )
+  {
+    courseName = CN ;
+  }
+
+  public String getCourseName()
+  {
+    return courseName;
+  } 
+
+   // setter and getter for instructorName
+
+  public void setInstructorName( String IN )
+  {
+    instructorName = IN ;
+  }
+
+  public String getInstructorName()
+  {
+    return instructorName;
+  } 
 
 
-  
+  // setter and getter for creditHours
 
-  
+  public void setCreditHours( int CH )
+  {
+    creditHours = CH ;
+  }
 
+  public int getCreditHours()
+  {
+    return creditHours;
+  }
+
+// equals method 
+!!!!!!!!!!???????
+
+// toString mehod that returns a string containing all course information
+ public String toString()
+  {
+    StringBuilder sb = new StringBuilder("[");
+    sb.append(courseID);
+    sb.append("--->");
+    sb.append(courseName);
+    sb.append("--->");
+    sb.append(instructorName);
+    sb.append("--->");
+    sb.append(creditHours);
+    sb.append("]");
+    return sb.toString();
+  }
+ 
   
 }
