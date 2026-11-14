@@ -80,7 +80,17 @@ private int creditHours ;
   }
 
 // equals method 
-!!!!!!!!!!???????
+public boolean equals(Object obj)
+{
+    if (!(obj instanceof Course))
+        return false;
+
+    Course c = (Course) obj;
+  if(courseID == c.courseID)
+    return true;
+  else
+    return false; 
+}
 
 // toString mehod that returns a string containing all course information
  public String toString()
