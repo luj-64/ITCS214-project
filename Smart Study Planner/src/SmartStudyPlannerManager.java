@@ -9,6 +9,13 @@ private LinkedList<Course> courses = new  LinkedList<Course>();
 private LinkedList<StudyTask> tasks = new LinkedList<StudyTask>();
 private LinkedList<StudySession> sessions = new LinkedList<StudySession>();
 
+public void addCourse(Course c1 )
+  {
+    
+
+
+    
+  }
 
 
 
