@@ -80,16 +80,12 @@ private int creditHours ;
   }
 
 // equals method 
-public boolean equals(Object obj)
+public boolean equals(Course Cr)
 {
-    if (!(obj instanceof Course))
-        return false;
+    if (Cr.getCourseID() == courseID)
+        return true;
 
-    Course c = (Course) obj;
-  if(courseID == c.courseID)
-    return true;
-  else
-    return false; 
+    return false;
 }
 
 // toString mehod that returns a string containing all course information
