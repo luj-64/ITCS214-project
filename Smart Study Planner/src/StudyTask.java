@@ -128,7 +128,13 @@ public StudyTask( int TI , String TT , int CI , String DL , int P , String S ) /
 
 //equals method 
 
-!!!!!!!!!
+public boolean equals(StudyTask St)
+{
+    if (St.getTaskID() == taskID)
+        return true;
+
+    return false;
+}
 
 // toString method that returns all task information
  public String toString()
