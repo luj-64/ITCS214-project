@@ -67,7 +67,13 @@ public class StudySession {
 
 // equals method 
 
-  !!!!!!!!
+  public boolean equals(StudySession Ss)
+{
+    if (Ss.getSessionID() == sessionID)
+        return true;
+
+    return false;
+}
 
 // toString method that returns all session information
   
