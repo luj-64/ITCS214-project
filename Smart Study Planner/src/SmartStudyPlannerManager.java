@@ -27,10 +27,14 @@ public void addCourse(Course c1 )
 // Display all courses
   public void displayCourses()
 {
+  if (courses.isEmpty())
+    System.out.println("No Courses Found");
+  else{
     for (int i = 0; i < courses.size(); i++)
     {
         System.out.println(courses.get(i));
     }
+  }
 }
 
 //add a study task ensuring that the task ID is unique and the associated course exists
@@ -63,11 +67,16 @@ public void addStudyTask( StudyTask t1 )
 
   public void displayStudyTasks()
   {
+    if (tasks.isEmpty())
+    System.out.println("No Study Tasks Found");
+    else
+    {
     for (int i = 0; i < tasks.size() ; i++)
     {
       System.out.println(tasks.get(i));
       
         }
+    }
   }
 
   // Search for a study task using its ID
@@ -109,20 +118,23 @@ public void addStudyTask( StudyTask t1 )
   //Display all High-priority tasks that are not Completed
 
  public void displayHpriorityNC()
-  {
-    for(int i = 0; i < tasks.size(); i++ )
-      {
+{
+    boolean Found = false;
+
+    for (int i = 0; i < tasks.size(); i++)
+    {
         StudyTask theTask = tasks.get(i);
 
-          if( theTask.isHighPriority() && ! theTask.isCompleted() )
+        if (theTask.isHighPriority() && !theTask.isCompleted())
         {
-          System.out.println(theTask);
-          
+            System.out.println(theTask);
+            Found = true;
         }
+    }
 
-      
-      }  
-  }
+    if (Found == false)
+        System.out.println("No High Priority Incomplete Tasks Found");
+}
 
   //Add a study session, ensuring that the session ID is unique and the associated task exists 
   public void addStudySession( StudySession s1 )
@@ -152,19 +164,24 @@ public void addStudyTask( StudyTask t1 )
 
   // Display all study sessions associated with a specified task ID
 
-  public void displaySessionsByTask(int taskID )
-  {
-    for(int i = 0; i < sessions.size(); i++ )
-      {
-        StudySession s2 = sessions.get(i);
-        if(s2.getTaskID() == taskID)
-        {
-          System.out.println(s2);
-        }
-        
-      }
+public void displaySessionsByTask(int taskID)
+{
+    boolean Found = false;
 
-  }
+    for (int i = 0; i < sessions.size(); i++)
+    {
+        StudySession s2 = sessions.get(i);
+
+        if (s2.getTaskID() == taskID)
+        {
+            System.out.println(s2);
+            Found = true;
+        }
+    }
+
+    if (Found == false)
+        System.out.println("No Sessions Found for this Task");
+}
 
   // Calculating the overall task completion percentage
 
