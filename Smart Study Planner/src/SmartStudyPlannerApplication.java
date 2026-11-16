@@ -281,6 +281,13 @@ public void runMenu()
 
     } while (choice != 0);
 }
- 
+
+// main method
+ public static void main(String[] args)
+{
+    SmartStudyPlannerApplication app = new SmartStudyPlannerApplication();
+    app.runMenu();
+}
+
   
 }
