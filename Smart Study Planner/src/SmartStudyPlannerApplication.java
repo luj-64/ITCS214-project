@@ -286,7 +286,14 @@ public void runMenu()
  public static void main(String[] args)
 {
     SmartStudyPlannerApplication app = new SmartStudyPlannerApplication();
-    app.runMenu();
+ 
+     System.out.print("Do you want to display the menu? (Y/N): ");
+    String answer = app.input.next();
+
+    if (answer.equalsIgnoreCase("Y"))
+        app.runMenu();
+    else
+        System.out.println("Exiting Smart Study Planner");
 }
 
   
