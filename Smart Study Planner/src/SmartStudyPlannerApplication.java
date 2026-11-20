@@ -127,7 +127,6 @@ public class SmartStudyPlannerApplication {
         try {
 
             manager.updateTaskStatus(taskID, newStatus);
-            System.out.println("Task status updated successfully!");
 
         }
         catch (IllegalArgumentException e) {
@@ -273,13 +272,9 @@ public class SmartStudyPlannerApplication {
                 System.out.println("Invalid choice. Please try again.");
                 System.out.println();
 
-            if (choice != 0)
-            {
-                System.out.print("Do you want to display the menu again? (Y/N): ");
-                answer = input.next();
-            }
 
-        } while (choice != 0 && answer.equalsIgnoreCase("Y"));
+
+        } while (choice != 0 );
     }
 
 
@@ -288,13 +283,10 @@ public class SmartStudyPlannerApplication {
     {
         SmartStudyPlannerApplication app = new SmartStudyPlannerApplication();
         System.out.println();
-        System.out.print("Do you want to display the menu? (Y/N): ");
-        String answer = app.input.next();
 
-        if (answer.equalsIgnoreCase("Y"))
+        System.out.println("=====Smart Study Planner=====");
+
             app.runMenu();
-        else
-            System.out.println("Exiting Smart Study Planner");
     }
 
 
