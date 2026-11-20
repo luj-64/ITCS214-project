@@ -217,7 +217,6 @@ public class SmartStudyPlannerApplication {
     public void runMenu()
     {
         int choice;
-        String answer = "Y";
 
         do
         {
